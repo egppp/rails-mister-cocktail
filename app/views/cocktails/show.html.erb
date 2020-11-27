@@ -1,6 +1,9 @@
 <h1><%= @cocktail.name%></h1>
 <div class="d-flex p-5 justify-content-around">
   <div class="container">
+    <%= cl_image_tag @cocktail.photo.key, height: 300, width: 400, crop: :fill %>
+  </div>
+  <div class="container">
     <h3>Cocktail formula:</h3>
     <% @doses.each do |dose| %>
       <p><%= dose.description %>
