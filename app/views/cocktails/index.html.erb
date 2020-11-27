@@ -1,0 +1,25 @@
+
+<nav class="navbar navbar-light bg-light">
+  <div class="d-flex justify-content-between align-content-center w-100">
+    <%= image_tag "shake-it-off.jpg", alt: "alttext", height:"90" %>
+    <a class="navbar-brand" href="cocktails/new">
+      <button class="btn btn-outline my-2 my-sm-0" type="submit">Add a new cocktail</button>
+    </a>
+  </div>
+</nav>
+
+<div class="container">
+  <div class = "row">
+    <% @cocktails.each do |cocktail| %>
+      <div class=" col-lg-4" style="width: 18rem;">
+        <div class="card mb-3">
+          <div class="card-body ">
+            <h5 class="card-title"><%= cocktail.name.truncate(30) %></h5>
+            <p class="card-text"><%#= cocktail.ingredients %></p>
+            <a href="<%= cocktail_path(cocktail) %>" class="card-link">More info</a>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
