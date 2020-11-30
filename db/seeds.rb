@@ -22,4 +22,10 @@ end
 
 Ingredient.create(name: "Passion fruit")
 Ingredient.create(name: "Prosecco")
+Ingredient.create(name: "Wine")
+Ingredient.create(name: "Mint leaves")
+Ingredient.create(name: "Ginger")
+Ingredient.create(name: "Simple syrup")
+
+
 
